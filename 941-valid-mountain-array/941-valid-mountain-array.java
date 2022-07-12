@@ -9,7 +9,6 @@ class Solution {
                 high=i;
             }
         }
-        System.out.println(high);
         if(high==-1){
             return false;
         }
