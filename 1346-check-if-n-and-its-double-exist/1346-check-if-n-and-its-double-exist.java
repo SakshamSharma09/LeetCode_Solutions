@@ -6,7 +6,6 @@ class Solution {
                     continue;
                 }
                 if(arr[i] == 2*arr[j]){
-                    System.out.println(i+" "+j);
                     return true;
                 }
             }
