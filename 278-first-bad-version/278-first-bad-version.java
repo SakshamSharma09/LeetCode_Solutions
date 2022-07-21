@@ -15,10 +15,6 @@ public class Solution extends VersionControl {
                 right = mid;
             }
         }
-        
-        // if(left!=n+1){
-        //     return left;
-        // }
         return left;
     }
 }
