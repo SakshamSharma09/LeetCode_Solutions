@@ -1,14 +1,12 @@
 class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        int m = nums1.length;
-        int n = nums2.length;
-        int[] combArr = new int[m+n];
+        int[] combArr = new int[nums1.length+nums2.length];
 
         int s1=0;
         int s2=0;
         int start=0;
 
-        while(s1!=m && s2!=n){
+        while(s1!=nums1.length && s2!=nums2.length){
             if(nums1[s1]<=nums2[s2]){
                 combArr[start] = nums1[s1];
                 s1++;
@@ -20,13 +18,13 @@ class Solution {
             start++;
         }
 
-        while(s1!=m){
+        while(s1!=nums1.length){
             combArr[start] = nums1[s1];
             start++;
             s1++;
         }
 
-        while(s2!=n){
+        while(s2!=nums2.length){
             combArr[start] = nums2[s2];
             start++;
             s2++;
