@@ -13,7 +13,6 @@ class Solution {
         ListNode sum  = new ListNode();
         ListNode temp = sum;
         int carry = 0;
-        //System.out.println(l1.next.val);
         while(l1!=null || l2!=null || carry!=0){
             int numl1 = (l1!=null) ? l1.val : 0;
             int numl2 = (l2!=null) ? l2.val : 0;
