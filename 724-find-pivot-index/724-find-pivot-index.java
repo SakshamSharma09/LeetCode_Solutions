@@ -15,8 +15,9 @@ class Solution {
         
         
         for(int i=0;i<nums.length;i++){
-            if(leftRunningSum[i] == rightRunningSum[i])
+            if(leftRunningSum[i] == rightRunningSum[i]){
                 return i;
+            }
         }
         return -1;
     }
