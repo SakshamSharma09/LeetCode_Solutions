@@ -6,10 +6,10 @@ class Solution {
         do{
             slow = square(slow);
             fast = square(square(fast));
-            if(slow==1){
-                return true;
-            }
         }while(slow!=fast);
+        if(slow==1){
+            return true;
+        }
         return false;
     }
     
