@@ -14,15 +14,11 @@ public class Solution {
         if(head==null || head.next==null){
             return null;
         }
-        if(head.next==head){
-            return head;
-        }
         
         int lenCycle = lengthOfCycle(head);
         if(lenCycle==-1){
             return null;
         }
-        System.out.println(lenCycle);
         ListNode second = head;
         
         while(lenCycle!=0){
