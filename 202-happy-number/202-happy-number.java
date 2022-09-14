@@ -1,14 +1,15 @@
 class Solution {
     public boolean isHappy(int n) {
-        HashSet<Integer> map = new HashSet<Integer>();
-        int newNo = square(n);
+        int slow = n;
+        int fast = n;
+        
         do{
-            if(newNo==1){
+            slow = square(slow);
+            fast = square(square(fast));
+            if(slow==1){
                 return true;
             }
-            map.add(newNo);
-            newNo = square(newNo);
-        } while(!map.contains(newNo));
+        }while(slow!=fast);
         return false;
     }
     
