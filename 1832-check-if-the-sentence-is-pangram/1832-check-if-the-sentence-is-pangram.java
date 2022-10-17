@@ -1,18 +1,15 @@
 class Solution {
     public boolean checkIfPangram(String sentence) {
-        if(sentence.length()<26){
-            return false;
-        }
-        int[] ans = new int[26];
+        HashSet<String> seen = new HashSet<String>();
         for(int i=0;i<sentence.length();i++){
-            ans[(int)sentence.charAt(i)- 97]++;
-        }
-        
-        for(int i=0;i<ans.length;i++){
-            if(ans[i]==0){
-                return false;
+            if(!seen.contains(Character.toString(sentence.charAt(i)))){
+                seen.add(Character.toString(sentence.charAt(i)));
             }
         }
-        return true;
+        
+        if(seen.size()==26){
+            return true;
+        }
+        return false;
     }
 }
