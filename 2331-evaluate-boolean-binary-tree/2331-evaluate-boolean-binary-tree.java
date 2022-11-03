@@ -31,18 +31,8 @@ class Solution {
         boolean right = evaluateTree(root.right);
         
         if(root.val == 2){
-            if(!left && !right){
-                return false;
-            }
-            else{
-                return true;
-            }
+            return left || right; 
         }
-        if(root.val == 3){
-            if(left && right){
-                return true;
-            }
-        }
-        return false;
+        return left && right;
     }
 }
